@@ -36,7 +36,8 @@ YUI.add('ez-maplocation-view-tests', function (Y) {
         setUp: function () {
             this.loaderMock = new Y.Mock();
             Y.Mock.expect(this.loaderMock, {
-                method: 'load'
+                method: 'load',
+                param: ['']
             });
 
             this.fieldDefinition = {fieldType: 'ezgmaplocation'};

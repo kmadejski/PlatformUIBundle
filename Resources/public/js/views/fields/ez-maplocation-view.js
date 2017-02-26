@@ -34,10 +34,13 @@ YUI.add('ez-maplocation-view', function (Y) {
          * @method initializer
          */
         initializer: function () {
-            var mapLoader = this.get('mapAPILoader');
+            var mapLoader = this.get('mapAPILoader'),
+                config = this.get('config');
 
             if ( !this._isFieldEmpty() && mapLoader ) {
-                mapLoader.load();
+                /*jshint camelcase: false */
+                mapLoader.load(config.apiKeys.google_maps || '');
+                /*jshint camelcase: true */
                 this.after('activeChange', function (e) {
                     if ( e.newVal ) {
                         mapLoader.on('mapAPIReady', Y.bind(this._initMap, this));
