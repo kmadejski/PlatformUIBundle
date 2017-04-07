@@ -334,12 +334,6 @@
         <note>key: image.upload</note>
         <jms:reference-file>./Resources/public/templates/fields/edit/image.hbt</jms:reference-file>
       </trans-unit>
-      <trans-unit id="f0edbc370c196d4d5a74049ed4382bbd16aa4b82" resname="input.not.valid">
-        <source>This is not a valid input</source>
-        <target>This is not a valid input</target>
-        <note>key: input.not.valid</note>
-        <jms:reference-file>./Resources/public/js/views/fields/ez-date-editview.js</jms:reference-file>
-      </trans-unit>
       <trans-unit id="8e49b578596402bf9f38b7a53ee4e6838f31c1a9" resname="invalid.float.value">
         <source>The value should be a valid float number</source>
         <target>The value should be a valid float number</target>
