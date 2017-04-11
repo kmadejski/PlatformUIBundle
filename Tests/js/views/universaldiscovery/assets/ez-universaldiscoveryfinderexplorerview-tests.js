@@ -153,6 +153,17 @@ YUI.add('ez-universaldiscoveryfinderexplorerview-tests', function (Y) {
                 );
             }, this));
         },
+
+        "Should set ownSelectedItem attribute to false when the explorer view wakeUp": function () {
+            Y.Array.each(this.levelViews, Y.bind(function (levelView) {
+                levelView.set('ownSelectedItem', true);
+                this.view.wakeUp();
+                Assert.isFalse(
+                    levelView.get('ownSelectedItem'),
+                    "ownSelectedItem attribute should be false"
+                );
+            }, this));
+        },
     });
 
     navigateTest = new Y.Test.Case({
